@@ -36,7 +36,7 @@ It does **not** touch your files:
 - Every run gets its own `--session-id <uuid>` and the tool reads exactly that transcript. It stops (non-zero exit) if the CLI fails, the transcript is missing or has no usage — a failed call can never be recorded as a measurement.
 - Cost: 7 CLI calls of roughly 55–75K input tokens each. Depending on how you authenticate they consume plan usage or API billing.
 
-Reading the output: a run is valid only if its MCP tool-name count is the expected one (A1's count for A/B runs, 0 for C/D). `claude -p` sometimes sends the first turn before every MCP server has announced its tools (seen here: 221 of 266 names, total 1.2K lower, *same* `cache_read` as a complete run — so `cache_read` alone does not catch it). Such runs are recorded as discarded and re-run automatically (max 3). The `.md` also reports the baseline drift A4 − A1 and the additivity residual against both A1 and A4. ⚠ The discard-and-re-run branch has not yet been exercised by a real incomplete run (the two verification runs had 0 discards after the check was added).
+Reading the output: a run is valid only if its MCP tool-name count is the expected one (A1's count for A/B runs, 0 for C/D). `claude -p` sometimes sends the first turn before every MCP server has announced its tools (seen here: 221 of 266 names, total 1.2K lower, *same* `cache_read` as a complete run — so `cache_read` alone does not catch it). Such runs are recorded as discarded and re-run automatically (max 3). The `.md` also reports the baseline drift A4 − A1 and the additivity residual against both A1 and A4. The discard-and-re-run branch is covered by `tests/test_measure_retry.py` (stubbed); the two real verification runs had 0 discards.
 
 ## What is measured and what is not
 
@@ -62,7 +62,7 @@ Reading the output: a run is valid only if its MCP tool-name count is the expect
 
 ## Checking the tool itself
 
-- `python -m pytest -q tests` — the transcript reader on synthetic `.jsonl` fixtures (first-turn usage, MCP tool names, and that an unparseable line is **counted**, not skipped — `measure.py` stops if any line fails to parse).
+- `python -m pytest -q tests` — the discard-and-re-run branch (stubbed `run()`: an incomplete MCP list is discarded and re-run, three in a row fail closed) and the transcript reader on synthetic `.jsonl` fixtures (first-turn usage, MCP tool names, and that an unparseable line is **counted**, not skipped — `measure.py` stops if any line fails to parse).
 - `python scripts/verify_results.py data/measure_2026-09-19.json` — recomputes every number of `summary` from the seven runs with separate arithmetic and checks the `.md` carries the same totals (`RESULT: ALL PASS`).
 - `.github/workflows/verify.yml` runs both plus `sha256sum -c`, `compileall`, `ruff check` (bare `except`, pyflakes) and `ruff format --check` on every push. Data under `data/` is never formatted or linted.
 

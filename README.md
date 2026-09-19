@@ -73,3 +73,7 @@ The transcripts themselves (`.jsonl`, they contain the prompts and the work), `M
 ## License
 
 Code: MIT (`LICENSE`). Data, tables and figures: CC BY 4.0 (`DATA_LICENSE`) — please credit **Sumitsuke Lab** (https://sumitsuke.jp/lab/).
+
+## Changelog
+
+- 2026-09-19: line endings normalized to LF (`.gitattributes`) and `SHA256SUMS` regenerated from the git index. Values differ from a `SHA256SUMS` fetched before this change; the previous file is at commit `c1ea0e4` (`git show c1ea0e4:SHA256SUMS`). Before this, `sha256sum -c` failed on Linux/macOS for CRLF-hashed files.

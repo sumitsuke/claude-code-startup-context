@@ -12,7 +12,7 @@ jobs:
           python-version: '3.12'
       - name: compiles / no bare except / formatted
         run: |
-          pip install -q ruff
+          pip install -q ruff==0.15.12
           python -m compileall -q scripts tests
           ruff check .
           ruff format --check .
@@ -20,5 +20,6 @@ jobs:
         run: sha256sum -c SHA256SUMS
       - name: reproduce from committed data and compare
         run: |
+          pip install -q pytest
           python scripts/verify_results.py data/measure_2026-09-19.json
           python -m pytest -q tests

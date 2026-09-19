@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 tauridev
+Copyright (c) 2026 Sumitsuke (https://sumitsuke.jp/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,8 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
---- Third-party ---
-Generated corpus under raw/ and raw7b/ was produced with Qwen2.5-Coder
-(Apache-2.0) via Ollama (MIT). Detection uses Semgrep CE engine (LGPL 2.1);
-only self-authored rules are bundled (rules/). These retain their own licenses.

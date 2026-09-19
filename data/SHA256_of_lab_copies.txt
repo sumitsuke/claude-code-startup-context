@@ -1,0 +1,5 @@
+# 公開用の写し・2026-09-19T14:28:37 JST
+91ce0b3d0cfb79a535be3d1f9393879cc6103598bb226b457ac0d7c7b4eb234e      3804  experiment_D_additivity_2026-09-19.py
+1012c9512152f8caa2f81a2bc2168026702dade2963467a51dff6cecb8d79083      4923  experiment_startup_decomposition_2026-09-19.py
+47f4639c7e61eece7c9a87d5739a35d7b116f3dff0850677f35e12695ee0d4c6      4125  experiment_startup_decomposition_result_2026-09-19.md
+2bf59ffe9b64e20324a18abfd8806e529fb3c0a9fe3b150085d1b3e64a1b3a45      5166  first_turn_usage_sessions_2026-09-12_19.json

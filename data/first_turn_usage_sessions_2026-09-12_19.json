@@ -1,0 +1,215 @@
+{
+ "note": "各セッションの 1 応答目 usage（input+cache_creation+cache_read）。依頼文は字数だけ・本文は含まない。same_prompt_series＝ほぼ同一依頼文の系列。分岐の複製は session と usage が同値",
+ "rows": [
+  {
+   "start_utc": "2026-09-12T01:43",
+   "first_turn_input": 86159,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.266",
+   "prompt_chars": 90,
+   "same_prompt_series": true,
+   "responses": 341,
+   "session": "861a6c18"
+  },
+  {
+   "start_utc": "2026-09-12T05:42",
+   "first_turn_input": 86253,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.266",
+   "prompt_chars": 102,
+   "same_prompt_series": false,
+   "responses": 137,
+   "session": "2dafa2a9"
+  },
+  {
+   "start_utc": "2026-09-12T07:00",
+   "first_turn_input": 86185,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.266",
+   "prompt_chars": 24,
+   "same_prompt_series": false,
+   "responses": 1444,
+   "session": "3f1db423"
+  },
+  {
+   "start_utc": "2026-09-12T07:00",
+   "first_turn_input": 86185,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.266",
+   "prompt_chars": 24,
+   "same_prompt_series": false,
+   "responses": 297,
+   "session": "ebfccb7a"
+  },
+  {
+   "start_utc": "2026-09-12T07:10",
+   "first_turn_input": 88323,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.266",
+   "prompt_chars": 1532,
+   "same_prompt_series": false,
+   "responses": 68,
+   "session": "7023d3e9"
+  },
+  {
+   "start_utc": "2026-09-13T21:43",
+   "first_turn_input": 86613,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.266",
+   "prompt_chars": 79,
+   "same_prompt_series": true,
+   "responses": 494,
+   "session": "9602a1fe"
+  },
+  {
+   "start_utc": "2026-09-14T21:44",
+   "first_turn_input": 88063,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.270",
+   "prompt_chars": 21,
+   "same_prompt_series": false,
+   "responses": 3861,
+   "session": "47b502b9"
+  },
+  {
+   "start_utc": "2026-09-14T22:47",
+   "first_turn_input": 88756,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.270",
+   "prompt_chars": 89,
+   "same_prompt_series": true,
+   "responses": 356,
+   "session": "284b3f08"
+  },
+  {
+   "start_utc": "2026-09-15T21:41",
+   "first_turn_input": 89509,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.270",
+   "prompt_chars": 89,
+   "same_prompt_series": true,
+   "responses": 750,
+   "session": "e7a5bfb6"
+  },
+  {
+   "start_utc": "2026-09-16T21:58",
+   "first_turn_input": 79440,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.271",
+   "prompt_chars": 88,
+   "same_prompt_series": true,
+   "responses": 862,
+   "session": "6ffd4293"
+  },
+  {
+   "start_utc": "2026-09-16T21:58",
+   "first_turn_input": 79440,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.271",
+   "prompt_chars": 88,
+   "same_prompt_series": true,
+   "responses": 870,
+   "session": "d18374c2"
+  },
+  {
+   "start_utc": "2026-09-17T21:43",
+   "first_turn_input": 85765,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.271",
+   "prompt_chars": 88,
+   "same_prompt_series": true,
+   "responses": 93,
+   "session": "c9d3223e"
+  },
+  {
+   "start_utc": "2026-09-17T21:53",
+   "first_turn_input": 85591,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.271",
+   "prompt_chars": 81,
+   "same_prompt_series": false,
+   "responses": 2311,
+   "session": "620a7345"
+  },
+  {
+   "start_utc": "2026-09-18T01:04",
+   "first_turn_input": 85661,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.271",
+   "prompt_chars": 11,
+   "same_prompt_series": false,
+   "responses": 886,
+   "session": "88fb8628"
+  },
+  {
+   "start_utc": "2026-09-18T03:25",
+   "first_turn_input": 85949,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.271",
+   "prompt_chars": 54,
+   "same_prompt_series": false,
+   "responses": 73,
+   "session": "3fffe053"
+  },
+  {
+   "start_utc": "2026-09-18T11:40",
+   "first_turn_input": 87078,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.275",
+   "prompt_chars": 65,
+   "same_prompt_series": false,
+   "responses": 101,
+   "session": "03976371"
+  },
+  {
+   "start_utc": "2026-09-18T22:42",
+   "first_turn_input": 88045,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.275",
+   "prompt_chars": 88,
+   "same_prompt_series": true,
+   "responses": 232,
+   "session": "881d40a6"
+  },
+  {
+   "start_utc": "2026-09-18T22:57",
+   "first_turn_input": 87367,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.275",
+   "prompt_chars": 46,
+   "same_prompt_series": false,
+   "responses": 189,
+   "session": "273fdb5c"
+  },
+  {
+   "start_utc": "2026-09-18T22:57",
+   "first_turn_input": 87367,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.275",
+   "prompt_chars": 46,
+   "same_prompt_series": false,
+   "responses": 35,
+   "session": "ca33be71"
+  },
+  {
+   "start_utc": "2026-09-18T23:12",
+   "first_turn_input": 87819,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.275",
+   "prompt_chars": 6,
+   "same_prompt_series": false,
+   "responses": 643,
+   "session": "98c0056e"
+  },
+  {
+   "start_utc": "2026-09-18T23:20",
+   "first_turn_input": 87494,
+   "model": "claude-opus-5",
+   "cli_version": "2.1.275",
+   "prompt_chars": 46,
+   "same_prompt_series": false,
+   "responses": 299,
+   "session": "c1709575"
+  }
+ ]
+}

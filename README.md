@@ -58,7 +58,13 @@ Reading the output: a run is valid only if its MCP tool-name count is the expect
 - `data/RESULTS_2026-09-19.md` — the A1/B/A2/C/A3 and D/A4 tables, the discarded run P, the attachment-size decomposition, and the corrections made after review.
 - `data/measure_2026-09-19.json` / `.md` — `scripts/measure.py` run end-to-end on the same project one hour later (15:10 JST), with the final code: memory −11,797 (the index had grown 219 bytes), MCP **−8,439** (identical), both −20,233, residual +3 (vs A1) / +5 (vs A4), baseline ±2, 0 runs discarded. `data/measure_2026-09-19_run1_incomplete_mcp_list.json` is the run just before it (15:08, earlier code without the validity check): its A2 came back at 72,987 with 221 of 266 MCP tool names **and the same `cache_read` as A1** — the observation that made the tool check tool-name counts instead of `cache_read`.
 - `data/original_2026-09-19/` — the two scripts that actually produced those tables and their raw result file, kept verbatim (they hard-code that day's values and rewrite the real `MEMORY.md`: **historical evidence, do not run**). `SHA256_of_lab_copies.txt` there matches the copies published under `https://sumitsuke.jp/lab/startup-context-decomposition/evidence/`.
-- `SHA256SUMS` (repository root) — checksums of the files as they are in this repository: `sha256sum -c SHA256SUMS`.
+- `SHA256SUMS` (repository root) — checksums of the files as they are in this repository: `sha256sum -c SHA256SUMS`. Computed from the git index (LF), so it verifies on Linux/macOS/Windows alike; `.gitattributes` pins line endings.
+
+## Checking the tool itself
+
+- `python -m pytest -q tests` — the transcript reader on synthetic `.jsonl` fixtures (first-turn usage, MCP tool names, and that an unparseable line is **counted**, not skipped — `measure.py` stops if any line fails to parse).
+- `python scripts/verify_results.py data/measure_2026-09-19.json` — recomputes every number of `summary` from the seven runs with separate arithmetic and checks the `.md` carries the same totals (`RESULT: ALL PASS`).
+- `.github/workflows/verify.yml` runs both plus `sha256sum -c`, `compileall`, `ruff check` (bare `except`, pyflakes) and `ruff format --check` on every push. Data under `data/` is never formatted or linted.
 
 ## Not included (and why)
 
